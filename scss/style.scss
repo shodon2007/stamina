@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../font/icomoon/icomoon.woff');
+}
+
+.header__burger:before {
+    font-family: 'icomoon';
+    content: '\e5d2';
+}
