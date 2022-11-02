@@ -43,6 +43,7 @@
 }
 
 .first-screen__subtitle {
+    max-width: 600px;
     text-align: center;
     color: white;
     font-size: 20px;
@@ -68,4 +69,24 @@
     background-color: white;
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+    .first-screen__title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .first-screen__subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .first-screen__title {
+        font-size: 16px;
+    }
+
+    .first-screen__button a {
+        padding: 10px 25px;
+    }
+}
