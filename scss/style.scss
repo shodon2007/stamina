@@ -1,9 +1,20 @@
-@font-face {
-    font-family: 'icomoon';
-    src: url('../font/icomoon/icomoon.woff');
+@import "_reset";
+@import "_font";
+@import "_first-screen";
+@import "_header";
+
+body * {
+    font-family: Muli;
 }
 
-.header__burger:before {
-    font-family: 'icomoon';
-    content: '\e5d2';
+.body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .body {
+        width: 100%;
+        padding: 0 10px;
+    }
 }
