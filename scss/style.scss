@@ -2,8 +2,11 @@
 @import "_font";
 @import "_first-screen";
 @import "_header";
+@import "_burger";
 
-body * {
+
+
+body {
     font-family: Muli;
 }
 
@@ -11,6 +14,8 @@ body * {
     width: 1200px;
     margin: 0 auto;
 }
+
+
 
 @media (max-width: 1200px) {
     .body {
