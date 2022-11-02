@@ -1,3 +1,56 @@
+.burger__exit::before {
+    font-family: icomoon;
+    content: '\f00d';
+}
+
+.burger {
+    padding: 20px 0;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: white;
+    width: 300px;
+    height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.burger.active {
+    right: 0;
+}
+
+.burger__exit {
+    font-size: 30px;
+    color: #989898;
+    padding: 0 20px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.burger__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.burger__nav a {
+    color: #212529;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.burger__nav a.active {
+    color: #f23a2e;
+}
+
+.burger__nav a:hover {
+    color: #f23a2e;
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -23,16 +76,30 @@ header {
     padding: 0 20px;
 }
 
-.header__nav a span {
+.header__nav a.active span {
     border-bottom: 2px solid white;
     padding: 7px 0;
 }
 
 .header__burger {
+    cursor: pointer;
     display: none;
+    color: white;
+    font-size: 25px;
 }
 
 .header__burger:before {
     font-family: 'icomoon';
     content: '\e5d2';
+}
+
+
+@media (max-width: 1200px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+    }
 }

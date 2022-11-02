@@ -11,6 +11,17 @@
 </head>
 
 <body>
+    <div class="burger">
+        <div onclick="burgerClick()" class="burger__exit"></div>
+        <div class="burger__nav">
+            <a class="active" href="#"><span>Home</span></a>
+            <a href="#"><span>Classes</span></a>
+            <a href="#"><span>Schedule</span></a>
+            <a href="#"><span>Trainer</span></a>
+            <a href="#"><span>Services</span></a>
+            <a href="#"><span>Contact</span></a>
+        </div>
+    </div>
     <div class="first-screen">
         <div class="first-screen__video">
             <video autoplay loop muted plays-inline class="bg__video">
@@ -24,14 +35,14 @@
                     <span>.</span>
                 </div>
                 <div class="header__nav">
-                    <a href="#"><span>Home</span></a>
-                    <a href="#">Classes</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Trainer</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
+                    <a class="active" href="#"><span>Home</span></a>
+                    <a href="#"><span>Classes</span></a>
+                    <a href="#"><span>Schedule</span></a>
+                    <a href="#"><span>Trainer</span></a>
+                    <a href="#"><span>Services</span></a>
+                    <a href="#"><span>Contact</span></a>
                 </div>
-                <div class="header__burger"></div>
+                <div onclick="burgerClick()" class="header__burger"></div>
             </header>
 
             <div class="first-screen__content">
@@ -49,6 +60,9 @@
             </div>
         </div>
     </div>
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
