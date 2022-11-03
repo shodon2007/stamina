@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
@@ -33,19 +34,21 @@
         </div>
         <div class="body">
             <header class="header">
-                <div class="header__logo">
-                    STAMINA
-                    <span>.</span>
+                <div class="header__body">
+                    <div class="header__logo">
+                        STAMINA
+                        <span>.</span>
+                    </div>
+                    <div class="header__nav">
+                        <a class="active" href="#"><span>Home</span></a>
+                        <a href="#"><span>Classes</span></a>
+                        <a href="#"><span>Schedule</span></a>
+                        <a href="#"><span>Trainer</span></a>
+                        <a href="#"><span>Services</span></a>
+                        <a href="#"><span>Contact</span></a>
+                    </div>
+                    <div onclick="burgerClick()" class="header__burger"></div>
                 </div>
-                <div class="header__nav">
-                    <a class="active" href="#"><span>Home</span></a>
-                    <a href="#"><span>Classes</span></a>
-                    <a href="#"><span>Schedule</span></a>
-                    <a href="#"><span>Trainer</span></a>
-                    <a href="#"><span>Services</span></a>
-                    <a href="#"><span>Contact</span></a>
-                </div>
-                <div onclick="burgerClick()" class="header__burger"></div>
             </header>
 
             <div class="first-screen__content">
@@ -65,7 +68,68 @@
     </div>
 
 
+    <div class="stay">
+        <div class="body">
+            <div class="stay__top">
+                <div class="stay__subtitle">
+                    Stay Healthy
+                </div>
+                <div class="stay__title">
+                    <h2>
+                        Get A Perfect Body
+                    </h2>
+                </div>
+                <div class="stay__text">
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                    the blind texts.
+                    Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                </div>
+            </div>
 
+            <div class="stay__bottom swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide__logo"></div>
+                        <div class="slide__title">Be Fit</div>
+                        <div class="slide__text">
+                            Far far away, behind the word mountains,
+                            far from the countries Vokalia and Consonantia,
+                            there live the blind texts.
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__logo"></div>
+                        <div class="slide__title">Be Fit</div>
+                        <div class="slide__text">
+                            Far far away, behind the word mountains,
+                            far from the countries Vokalia and Consonantia,
+                            there live the blind texts.
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__logo"></div>
+                        <div class="slide__title">Be Fit</div>
+                        <div class="slide__text">
+                            Far far away, behind the word mountains,
+                            far from the countries Vokalia and Consonantia,
+                            there live the blind texts.
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__logo"></div>
+                        <div class="slide__title">Be Fit</div>
+                        <div class="slide__text">
+                            Far far away, behind the word mountains,
+                            far from the countries Vokalia and Consonantia,
+                            there live the blind texts.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

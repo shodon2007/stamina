@@ -117,6 +117,36 @@ select {
   font-family: "icomoon";
   src: url("../font/icomoon/icomoon.woff");
 }
+@font-face {
+  font-family: "flaticon";
+  src: url("../font/flaticon/Flaticon.woff");
+}
+@-webkit-keyframes titleAnimate {
+  0% {
+    top: 150px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes titleAnimate {
+  0% {
+    top: 150px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
 .first-screen {
   display: flex;
   position: relative;
@@ -151,6 +181,9 @@ select {
 }
 
 .first-screen__content {
+  position: relative;
+  -webkit-animation: titleAnimate 1s ease-out;
+          animation: titleAnimate 1s ease-out;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -207,11 +240,51 @@ select {
     padding: 10px 25px;
   }
 }
-header {
+.header__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 0;
+}
+
+.scroll {
+  z-index: 2;
+  transition: all 0.4s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  color: black;
+}
+.scroll .header__body {
+  padding: 1.5rem 0;
+  margin: 0 auto;
+  width: 1200px;
+}
+.scroll .header__logo {
+  color: black;
+}
+.scroll .header__nav a {
+  color: black;
+  transition: all 0.2s ease;
+}
+.scroll .header__burger {
+  color: black;
+}
+.scroll .header__nav a:hover {
+  color: #f23a2e;
+}
+.scroll .header__nav a.active span {
+  border-bottom: 2px solid #f23a2e;
+}
+
+.most-scroll .header__body {
+  transition: all 0.4s ease;
+  padding: 1rem 0;
+}
+.most-scroll .header__nav a.active span {
+  padding: 3px 0;
 }
 
 .header__logo {
@@ -248,6 +321,10 @@ header {
 }
 
 @media (max-width: 1200px) {
+  header.scroll .header__body {
+    width: 100%;
+    padding: 0 10px;
+  }
   .header__nav {
     display: none;
   }
@@ -319,6 +396,51 @@ header {
     padding: 10px 10px;
   }
 }
+.stay {
+  margin-top: 200px;
+  padding: 70px 0;
+}
+
+.stay .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stay__top {
+  text-align: center;
+  max-width: 600px;
+}
+
+.stay__subtitle {
+  font-size: 18px;
+  color: #ABABAB;
+}
+
+.stay__title h2 {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.stay__text {
+  color: #989898;
+  font-size: 17px;
+}
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 body {
   font-family: Muli;
 }
