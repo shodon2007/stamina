@@ -2,7 +2,7 @@ let isBurger = false;
 const burger = document.querySelector('.burger');
 const header = document.querySelector('.header');
 
-new Swiper('.swiper');
+
 
 const burgerClick = () => {
     if (isBurger == true) {
@@ -28,4 +28,26 @@ window.addEventListener('scroll', function () {
     } else {
         header.classList.remove('most-scroll');
     }
+});
+
+
+
+new Swiper('.swiper', {
+    sledesPerView: 3,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    autoHeight: true,
+    slidesPerView: 3,
+
+    loop: true,
+
+    autoplay: {
+        delay: 3000,
+    },
+
+    speed: 1000
 });
