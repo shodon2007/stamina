@@ -33,7 +33,7 @@ window.addEventListener('scroll', function () {
 
 
 new Swiper('.swiper', {
-    sledesPerView: 3,
+    slidesPerView: 1,
 
     pagination: {
         el: ".swiper-pagination",
@@ -41,7 +41,6 @@ new Swiper('.swiper', {
     },
 
     autoHeight: true,
-    slidesPerView: 3,
 
     loop: true,
 
@@ -49,5 +48,14 @@ new Swiper('.swiper', {
         delay: 3000,
     },
 
-    speed: 1000
+    speed: 1000,
+
+    breakpoints: {
+        500: {
+            slidesPerView: 2,
+        },
+        924: {
+            slidesPerView: 3,
+        }
+    }
 });

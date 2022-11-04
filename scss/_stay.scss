@@ -30,3 +30,9 @@
     color: #989898;
     font-size: 17px;
 }
+
+@media (max-width: 320px) {
+    .stay__title h2 {
+        font-size: 30px;
+    }
+}
