@@ -32,11 +32,7 @@
     font-size: 17px;
 }
 
-@media (max-width: 320px) {
-    .class__title h2 {
-        font-size: 30px;
-    }
-}
+
 
 
 .class__bottom .body {
@@ -67,16 +63,19 @@
     justify-content: center;
     flex-direction: column;
     flex-grow: 1;
-    padding-left: 10px;
+    padding: 0 10px;
 }
 
 .class__left {
     overflow: hidden;
+    width: 100px;
+    height: 100px;
 }
 
 .class__left img {
-    max-width: 100px;
     border-radius: 5px 0 0 5px;
+    width: 300px;
+    height: 100px;
 }
 
 .class__name {
@@ -86,4 +85,21 @@
 
 .class__author {
     color: #aeaeae;
+}
+
+@media (max-width: 768px) {
+    .class__bottom .body {
+        grid-template-columns: 1fr;
+    }
+
+    .class__card {
+        width: 100vw;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .class__title h2 {
+        font-size: 30px;
+    }
 }
