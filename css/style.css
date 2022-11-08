@@ -304,7 +304,7 @@ select {
   padding: 0 20px;
 }
 
-.header__nav a.active span {
+.header__nav .active span {
   border-bottom: 2px solid white;
   padding: 7px 0;
 }
@@ -400,6 +400,16 @@ select {
 .stay {
   margin-top: 200px;
   padding: 70px 0;
+}
+
+.stay *::-moz-selection {
+  color: white;
+  background-color: black;
+}
+
+.stay *::selection {
+  color: white;
+  background-color: black;
 }
 
 .stay .body {
@@ -568,6 +578,16 @@ select {
   flex-direction: column;
   width: 100vw;
   padding: 50px 0;
+}
+
+.class *::-moz-selection {
+  color: white;
+  background-color: black;
+}
+
+.class *::selection {
+  color: white;
+  background-color: black;
 }
 
 .class__top {

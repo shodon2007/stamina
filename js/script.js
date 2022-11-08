@@ -2,8 +2,9 @@ let isBurger = false;
 let position
 const burger = document.querySelector('.burger');
 const header = document.querySelector('.header');
-
-
+const anchors = document.querySelectorAll('a[href*="#"]');
+const classes = document.getElementById('classes');
+const home = document.getElementById('home');
 
 const burgerClick = () => {
     if (isBurger == true) {
@@ -28,6 +29,11 @@ window.addEventListener('scroll', function () {
         header.classList.add('most-scroll');
     } else {
         header.classList.remove('most-scroll');
+    }
+
+    if (classes.getBoundingClientRect().y <= 0) {
+        console.log(true);
+        document.querySelector('.link__classes').classList.add('active');
     }
 });
 
@@ -60,3 +66,17 @@ new Swiper('.swiper', {
         }
     }
 });
+
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const blockID = anchor.getAttribute('href').substr(1);
+
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    })
+}

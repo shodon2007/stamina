@@ -3,6 +3,11 @@
     padding: 70px 0;
 }
 
+.stay *::selection {
+    color: white;
+    background-color: black;
+}
+
 .stay .body {
     display: flex;
     flex-direction: column;
