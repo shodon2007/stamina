@@ -67,6 +67,8 @@
 }
 
 .class__left {
+    display: flex;
+    justify-content: center;
     overflow: hidden;
     width: 100px;
     height: 100px;
@@ -74,8 +76,8 @@
 
 .class__left img {
     border-radius: 5px 0 0 5px;
-    width: 300px;
     height: 100px;
+    min-width: max-content;
 }
 
 .class__name {
@@ -93,7 +95,7 @@
     }
 
     .class__card {
-        width: 100vw;
+        width: 90vw;
         padding: 10px;
     }
 }

@@ -510,8 +510,12 @@ select {
   content: "\f105";
 }
 
-.quote {
+.quote1 {
   background: url(../img/bg_2.jpg) center/cover no-repeat;
+}
+
+.quote2 {
+  background: url(../img/bg_3.jpg) center/cover no-repeat;
 }
 
 .quote__body {
@@ -623,6 +627,8 @@ select {
 }
 
 .class__left {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   width: 100px;
   height: 100px;
@@ -630,8 +636,10 @@ select {
 
 .class__left img {
   border-radius: 5px 0 0 5px;
-  width: 300px;
   height: 100px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 .class__name {
@@ -648,7 +656,7 @@ select {
     grid-template-columns: 1fr;
   }
   .class__card {
-    width: 100vw;
+    width: 90vw;
     padding: 10px;
   }
 }
