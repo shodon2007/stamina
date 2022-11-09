@@ -6,6 +6,9 @@ const anchors = document.querySelectorAll('a[href*="#"]');
 const classes = document.getElementById('classes');
 const home = document.getElementById('home');
 
+document.querySelectorAll('.link__home')[0].classList.add('active');
+document.querySelectorAll('.link__home')[1].classList.add('active');
+
 const burgerClick = () => {
     if (isBurger == true) {
         burger.classList.remove('active');
@@ -30,13 +33,25 @@ window.addEventListener('scroll', function () {
     } else {
         header.classList.remove('most-scroll');
     }
-
+    if (home.getBoundingClientRect().y >= 0) {
+        resetLinks();
+        document.querySelectorAll('.link__home')[0].classList.add('active');
+        document.querySelectorAll('.link__home')[1].classList.add('active');
+    }
     if (classes.getBoundingClientRect().y <= 0) {
-        console.log(true);
-        document.querySelector('.link__classes').classList.add('active');
+        resetLinks();
+        document.querySelectorAll('.link__classes')[0].classList.add('active');
+        document.querySelectorAll('.link__classes')[1].classList.add('active');
     }
 });
 
+
+function resetLinks() {
+    document.querySelectorAll('.link__home')[0].classList.remove('active');
+    document.querySelectorAll('.link__home')[1].classList.remove('active');
+    document.querySelectorAll('.link__classes')[0].classList.remove('active');
+    document.querySelectorAll('.link__classes')[1].classList.remove('active');
+}
 
 
 new Swiper('.swiper', {
