@@ -83,11 +83,18 @@
 
 @media (max-width: 768px) {
     .trainer__bottom .body {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .trainer__bottom .body {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 320px) {
+
     .trainer__title h2 {
         font-size: 30px;
     }
