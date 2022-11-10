@@ -782,6 +782,11 @@ select {
     font-size: 30px;
   }
 }
+.services .body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 body {
   font-family: Muli;
 }
