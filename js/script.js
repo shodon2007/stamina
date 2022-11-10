@@ -3,8 +3,9 @@ let position
 const burger = document.querySelector('.burger');
 const header = document.querySelector('.header');
 const anchors = document.querySelectorAll('a[href*="#"]');
-const classes = document.getElementById('classes');
-const home = document.getElementById('home');
+const classes = document.querySelector('.link__classes');
+const home = document.querySelector('.link__home');
+const trainer = document.querySelector('.link__trainer');
 
 document.querySelectorAll('.link__home')[0].classList.add('active');
 document.querySelectorAll('.link__home')[1].classList.add('active');
@@ -42,6 +43,11 @@ window.addEventListener('scroll', function () {
         resetLinks();
         document.querySelectorAll('.link__classes')[0].classList.add('active');
         document.querySelectorAll('.link__classes')[1].classList.add('active');
+    }
+    if (trainer.getBoundingClientRect().y <= 0) {
+        resetLinks();
+        document.querySelectorAll('.link__trainer')[0].classList.add('active');
+        document.querySelectorAll('.link__trainer')[1].classList.add('active');
     }
 });
 
@@ -88,7 +94,6 @@ for (let anchor of anchors) {
         e.preventDefault();
 
         const blockID = anchor.getAttribute('href').substr(1);
-
         document.getElementById(blockID).scrollIntoView({
             behavior: 'smooth',
             block: 'start',
