@@ -687,7 +687,7 @@ select {
   }
 }
 .trainer {
-  margin: 50px 0;
+  margin: 100px 0;
 }
 
 .trainer__top {
@@ -709,6 +709,10 @@ select {
 }
 
 .trainer__text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: 500px;
   color: #989898;
   font-size: 17px;
 }
@@ -782,11 +786,32 @@ select {
     font-size: 30px;
   }
 }
-.services .body {
+.services__bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
+.services__top {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services__bottom {
+  margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .services__bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .services__bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 body {
   font-family: Muli;
 }

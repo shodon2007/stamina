@@ -3,12 +3,15 @@ let position
 const burger = document.querySelector('.burger');
 const header = document.querySelector('.header');
 const anchors = document.querySelectorAll('a[href*="#"]');
-const classes = document.querySelector('.link__classes');
-const home = document.querySelector('.link__home');
-const trainer = document.querySelector('.link__trainer');
+const classes = document.getElementById('classes');
+const home = document.getElementById('home');
+const trainer = document.getElementById('trainer');
+const services = document.getElementById('services');
+
 
 document.querySelectorAll('.link__home')[0].classList.add('active');
 document.querySelectorAll('.link__home')[1].classList.add('active');
+
 
 const burgerClick = () => {
     if (isBurger == true) {
@@ -28,12 +31,14 @@ window.addEventListener('scroll', function () {
     } else {
         header.classList.remove('scroll');
     }
-
     if (window.pageYOffset >= 200) {
         header.classList.add('most-scroll');
     } else {
         header.classList.remove('most-scroll');
     }
+
+
+
     if (home.getBoundingClientRect().y >= 0) {
         resetLinks();
         document.querySelectorAll('.link__home')[0].classList.add('active');
@@ -43,11 +48,18 @@ window.addEventListener('scroll', function () {
         resetLinks();
         document.querySelectorAll('.link__classes')[0].classList.add('active');
         document.querySelectorAll('.link__classes')[1].classList.add('active');
+        console.log("active");
+        console.log(classes.getBoundingClientRect().y)
     }
     if (trainer.getBoundingClientRect().y <= 0) {
         resetLinks();
         document.querySelectorAll('.link__trainer')[0].classList.add('active');
         document.querySelectorAll('.link__trainer')[1].classList.add('active');
+    }
+    if (services.getBoundingClientRect().y <= 0) {
+        resetLinks();
+        document.querySelectorAll('.link__services')[0].classList.add('active');
+        document.querySelectorAll('.link__services')[1].classList.add('active');
     }
 });
 
@@ -57,6 +69,10 @@ function resetLinks() {
     document.querySelectorAll('.link__home')[1].classList.remove('active');
     document.querySelectorAll('.link__classes')[0].classList.remove('active');
     document.querySelectorAll('.link__classes')[1].classList.remove('active');
+    document.querySelectorAll('.link__trainer')[0].classList.remove('active');
+    document.querySelectorAll('.link__trainer')[1].classList.remove('active');
+    document.querySelectorAll('.link__services')[0].classList.remove('active');
+    document.querySelectorAll('.link__services')[1].classList.remove('active');
 }
 
 
@@ -94,6 +110,7 @@ for (let anchor of anchors) {
         e.preventDefault();
 
         const blockID = anchor.getAttribute('href').substr(1);
+        console.log(blockID)
         document.getElementById(blockID).scrollIntoView({
             behavior: 'smooth',
             block: 'start',
