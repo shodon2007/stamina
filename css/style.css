@@ -398,19 +398,18 @@ select {
     padding: 10px 10px;
   }
 }
-.stay {
-  margin-top: 200px;
-  padding: 70px 0;
-}
-
 .stay *::-moz-selection {
   color: white;
   background-color: black;
 }
-
 .stay *::selection {
   color: white;
   background-color: black;
+}
+
+.stay {
+  margin-top: 200px;
+  padding: 70px 0;
 }
 
 .stay .body {
@@ -448,7 +447,6 @@ select {
 }
 .swiper {
   width: 100%;
-  overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -531,8 +529,8 @@ select {
 
 .quote__body {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
@@ -573,22 +571,21 @@ select {
     padding: 100px 0;
   }
 }
-.class {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  padding: 50px 0;
-}
-
 .class *::-moz-selection {
   color: white;
   background-color: black;
 }
-
 .class *::selection {
   color: white;
   background-color: black;
+}
+
+.class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 50px 0;
 }
 
 .class__top {

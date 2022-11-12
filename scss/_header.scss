@@ -5,6 +5,8 @@
     padding: 1.5rem 0;
 }
 
+
+// header on scroll
 .scroll {
     z-index: 2;
     transition: all 0.4s ease;
@@ -43,6 +45,8 @@
     }
 }
 
+
+// header on most scroll
 .most-scroll {
     .header__body {
         transition: all 0.4s ease;

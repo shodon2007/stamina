@@ -1,7 +1,7 @@
 let isBurger = false;
-let position
 const burger = document.querySelector('.burger');
 const header = document.querySelector('.header');
+
 const anchors = document.querySelectorAll('a[href*="#"]');
 const classes = document.getElementById('classes');
 const home = document.getElementById('home');
@@ -9,10 +9,9 @@ const trainer = document.getElementById('trainer');
 const services = document.getElementById('services');
 
 
-document.querySelectorAll('.link__home')[0].classList.add('active');
-document.querySelectorAll('.link__home')[1].classList.add('active');
 
 
+// burger menu
 const burgerClick = () => {
     if (isBurger == true) {
         burger.classList.remove('active');
@@ -25,7 +24,13 @@ const burgerClick = () => {
 }
 
 
+
+
+document.querySelectorAll('.link__home')[0].classList.add('active');
+document.querySelectorAll('.link__home')[1].classList.add('active');
+
 window.addEventListener('scroll', function () {
+    // header on scroll
     if (window.pageYOffset >= 1) {
         header.classList.add('scroll');
     } else {
@@ -39,30 +44,28 @@ window.addEventListener('scroll', function () {
 
 
 
+    //links on header
     if (home.getBoundingClientRect().y >= 0) {
         resetLinks();
         document.querySelectorAll('.link__home')[0].classList.add('active');
         document.querySelectorAll('.link__home')[1].classList.add('active');
     }
-    if (classes.getBoundingClientRect().y <= 0) {
+    if (classes.getBoundingClientRect().y <= 200) {
         resetLinks();
         document.querySelectorAll('.link__classes')[0].classList.add('active');
         document.querySelectorAll('.link__classes')[1].classList.add('active');
-        console.log("active");
-        console.log(classes.getBoundingClientRect().y)
     }
-    if (trainer.getBoundingClientRect().y <= 0) {
+    if (trainer.getBoundingClientRect().y <= 200) {
         resetLinks();
         document.querySelectorAll('.link__trainer')[0].classList.add('active');
         document.querySelectorAll('.link__trainer')[1].classList.add('active');
     }
-    if (services.getBoundingClientRect().y <= 0) {
+    if (services.getBoundingClientRect().y <= 200) {
         resetLinks();
         document.querySelectorAll('.link__services')[0].classList.add('active');
         document.querySelectorAll('.link__services')[1].classList.add('active');
     }
 });
-
 
 function resetLinks() {
     document.querySelectorAll('.link__home')[0].classList.remove('active');
@@ -76,6 +79,28 @@ function resetLinks() {
 }
 
 
+
+
+
+// smooth scroll in click links
+for (let anchor of anchors) {
+    anchor.addEventListener('click', (link) => {
+        link.preventDefault();
+
+        const blockID = anchor.getAttribute('href').substr(1);
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    })
+}
+
+
+
+
+
+
+//swiper
 new Swiper('.swiper', {
     slidesPerView: 1,
 
@@ -105,15 +130,3 @@ new Swiper('.swiper', {
 });
 
 
-for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const blockID = anchor.getAttribute('href').substr(1);
-        console.log(blockID)
-        document.getElementById(blockID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-        });
-    })
-}
