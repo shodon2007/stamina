@@ -688,6 +688,10 @@ select {
 }
 
 .trainer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin: 0 auto;
   max-width: 600px;
@@ -706,6 +710,7 @@ select {
 }
 
 .trainer__text {
+  align-items: center;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -783,6 +788,10 @@ select {
     font-size: 30px;
   }
 }
+.services {
+  margin-bottom: 100px;
+}
+
 .services__bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -807,6 +816,40 @@ select {
 @media (max-width: 450px) {
   .services__bottom {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+.contact__bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.contact__bottom input,
+.contact__bottom textarea {
+  border: 0;
+  outline: 2px solid rgba(152, 152, 152, 0.3725490196);
+  color: #989898;
+  padding: 10px;
+}
+.contact__bottom input:focus,
+.contact__bottom textarea:focus {
+  outline-color: #f23a2e;
+}
+.contact__bottom textarea {
+  resize: vertical;
+}
+
+.contact__two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact__two {
+    grid-template-columns: 1fr;
   }
 }
 body {

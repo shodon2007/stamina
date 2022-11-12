@@ -1,0 +1,38 @@
+.contact__bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    input,
+    textarea {
+        border: 0;
+        outline: 2px solid #9898985f;
+        color: #989898;
+        padding: 10px;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline-color: #f23a2e;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+}
+
+.contact__two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .contact__two {
+        grid-template-columns: 1fr;
+    }
+}
