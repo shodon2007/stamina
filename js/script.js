@@ -14,10 +14,12 @@ const services = document.getElementById('services');
 // burger menu
 const burgerClick = () => {
     if (isBurger == true) {
+        document.querySelector('.burger__place').style.zIndex = -3;
         burger.classList.remove('active');
         isBurger = false;
 
     } else {
+        document.querySelector('.burger__place').style.zIndex = 3;
         burger.classList.add('active');
         isBurger = true;
     }
