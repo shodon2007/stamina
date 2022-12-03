@@ -97,7 +97,6 @@ for (let anchor of anchors) {
     anchor.addEventListener('click', (link) => {
         link.preventDefault();
         const blockID = anchor.getAttribute('href').substr(1);
-        console.log(blockID)
         document.getElementById(blockID).scrollIntoView({
             behavior: 'smooth',
             block: 'start',
