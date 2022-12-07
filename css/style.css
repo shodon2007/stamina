@@ -121,32 +121,6 @@ select {
   font-family: "flaticon";
   src: url("../font/flaticon/Flaticon.woff");
 }
-@-webkit-keyframes titleAnimate {
-  0% {
-    top: 150px;
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
-}
-@keyframes titleAnimate {
-  0% {
-    top: 150px;
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  100% {
-    top: 0px;
-    opacity: 1;
-  }
-}
 .first-screen {
   display: flex;
   position: relative;
@@ -181,14 +155,20 @@ select {
 }
 
 .first-screen__content {
+  opacity: 0;
+  transform: translate(0, 200px);
+  transition: all 1s ease;
   position: relative;
-  -webkit-animation: titleAnimate 1s ease-out;
-          animation: titleAnimate 1s ease-out;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.first-screen__content.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .first-screen__title {
@@ -706,17 +686,36 @@ select {
 }
 
 .trainer__subtitle {
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition: all 0.5s ease;
   font-size: 18px;
   color: #ABABAB;
 }
 
+.trainer__subtitle.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 .trainer__title h2 {
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition: all 0.5s ease;
   font-size: 60px;
   font-weight: 900;
   margin-bottom: 15px;
 }
 
+.trainer__title h2.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 .trainer__text {
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition: all 0.5s ease;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -724,6 +723,11 @@ select {
   max-width: 500px;
   color: #989898;
   font-size: 17px;
+}
+
+.trainer__text.active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .trainer__bottom .body {
@@ -734,10 +738,19 @@ select {
 }
 
 .trainer__man {
+  position: relative;
+  transform: translate(0, 100px);
+  opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.6s ease;
+}
+
+.trainer__man.active {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .trainer__icon {
