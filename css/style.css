@@ -909,6 +909,7 @@ select {
   grid-template-rows: 1fr;
 }
 .footer__email input {
+  color: #495057;
   flex-grow: 1;
   border: 0;
   outline: 2px solid #a5a5a5;
