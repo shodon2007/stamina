@@ -29,7 +29,9 @@ if (animItems.length > 0) {
             if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset)) {
                 animItem.classList.add('active')
             } else {
-                animItem.classList.remove('active')
+                if (!animItem.classList.contains('no-delete')) {
+                    animItem.classList.remove('active');
+                }
             }
         }
     }

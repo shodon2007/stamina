@@ -28,6 +28,40 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.services__slide {
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.services__slide:nth-child(1) {
+    transition: all 0.5s ease 0s;
+}
+
+.services__slide:nth-child(2) {
+    transition: all 0.5s ease 0.3s;
+}
+
+.services__slide:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+}
+
+.services__slide:nth-child(4) {
+    transition: all 0.5s ease 0.9s;
+}
+
+.services__slide:nth-child(5) {
+    transition: all 0.5s ease 0.12s;
+}
+
+.services__slide:nth-child(6) {
+    transition: all 0.5s ease 0.15s;
+}
+
+.services__slide.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 .services__top {
     text-align: center;
     display: flex;
