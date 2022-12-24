@@ -1023,7 +1023,7 @@ select {
     margin-top: 10px;
   }
 }
-* {
+html {
   overflow: hidden;
 }
 

@@ -16,7 +16,7 @@ function frame() {
     if (width >= 100) {
         setTimeout(() => {
             loaded();
-            document.querySelector('head').innerHTML += `<style>* {overflow: visible !important;}</style>`
+            document.querySelector('head').innerHTML += `<style>html {overflow: visible !important;}</style>`
         }, 1000);
         clearInterval(id);
         tll.play();
