@@ -1,6 +1,7 @@
 let isBurger = false;
 const burger = document.querySelector('.burger');
 const header = document.querySelector('.header');
+let loaded;
 
 const anchors = document.querySelectorAll('a[href*="#"]');
 const classes = document.getElementById('classes');
@@ -12,7 +13,7 @@ const animItems = document.querySelectorAll('.animItem');
 
 if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
-    animOnScroll();
+    loaded = animOnScroll;
     function animOnScroll() {
         for (let index = 0; index < animItems.length; index++) {
             const animItem = animItems[index];

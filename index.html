@@ -9,9 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stamina</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
+    <div id="preloader">
+        <div id="percent">1%</div>
+        <div id="bar">
+            <div id="barconfrm"></div>
+        </div>
+    </div>
     <div class="burger__place" onclick="burgerClick()">
     </div>
     <div class="burger">
@@ -517,6 +526,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/preload.js"></script>
 </body>
 
 </html>
