@@ -1,5 +1,8 @@
+.footer {
+    padding: 200px 100px 0;
+}
+
 .footer .body {
-    margin-top: 200px;
     display: grid;
     grid-template-columns: repeat(3, minmax(10px, 1fr));
 }
