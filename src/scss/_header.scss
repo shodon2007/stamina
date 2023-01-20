@@ -1,0 +1,111 @@
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+
+// header on scroll
+.scroll {
+    z-index: 2;
+    transition: all 0.4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: white;
+    color: black;
+
+    .header__body {
+        padding: 1.5rem 0;
+        margin: 0 auto;
+        width: 1200px;
+    }
+
+    .header__logo {
+        color: black;
+    }
+
+    .header__nav a {
+        color: black;
+        transition: all 0.2s ease;
+    }
+
+    .header__burger {
+        color: black;
+    }
+
+    .header__nav a:hover {
+        color: #f23a2e;
+    }
+
+    .header__nav a.active span {
+        border-bottom: 2px solid #f23a2e;
+    }
+}
+
+
+// header on most scroll
+.most-scroll {
+    .header__body {
+        transition: all 0.4s ease;
+        padding: 1rem 0;
+    }
+
+    .header__nav a.active span {
+        padding: 3px 0;
+    }
+}
+
+.header__logo {
+    font-weight: 900;
+    font-size: 20px;
+    color: white;
+
+    span {
+        color: red;
+    }
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.header__nav .active span {
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease;
+    padding: 7px 0;
+}
+
+.header__burger {
+    cursor: pointer;
+    display: none;
+    color: white;
+    font-size: 25px;
+}
+
+.header__burger:before {
+    font-family: 'icomoon';
+    content: '\e5d2';
+}
+
+
+
+@media (max-width: 1200px) {
+    header.scroll .header__body {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+    }
+}

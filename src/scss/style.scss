@@ -1,0 +1,33 @@
+@import "_reset";
+@import "_font";
+@import "_first-screen";
+@import "_header";
+@import "_burger";
+@import "_stay";
+@import "_swiper";
+@import "_quote";
+@import "_class";
+@import "_trainer";
+@import "_services";
+@import "_contact";
+@import "_footer";
+@import "_preload";
+
+
+body {
+    font-family: Muli;
+}
+
+.body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+@media (max-width: 1200px) {
+    .body {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
